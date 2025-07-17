@@ -2,7 +2,7 @@
 cask "ai-chat-md-export" do
   desc "CLI tool to convert ChatGPT and Claude chat history to Markdown"
   homepage "https://github.com/sugurutakahashi-1234/ai-chat-md-export"
-  version "0.7.4"
+  version "0.7.5"
 
   livecheck do
     skip "Auto-generated on release."
@@ -12,29 +12,35 @@ cask "ai-chat-md-export" do
 
   on_macos do
     on_intel do
-      url "https://github.com/sugurutakahashi-1234/ai-chat-md-export/releases/download/v0.7.4/ai-chat-md-export-darwin-amd64.tar.gz"
-      sha256 "5471a2ab13ee56a85f0a13b9c1f22f323ded7e86a3623f558d878c01ff33515c"
+      url "https://github.com/sugurutakahashi-1234/ai-chat-md-export/releases/download/v0.7.5/ai-chat-md-export-darwin-amd64.tar.gz"
+      sha256 "a0b46c1a3b78fa2b0c2dd0f02cdb339d44b81f9ebabb8eec97856744afb8add4"
     end
     on_arm do
-      url "https://github.com/sugurutakahashi-1234/ai-chat-md-export/releases/download/v0.7.4/ai-chat-md-export-darwin-arm64.tar.gz"
-      sha256 "79aa6e7a99f93222c1db2d089074eaf626dce28e0facfd1f554f9cce26d9c851"
+      url "https://github.com/sugurutakahashi-1234/ai-chat-md-export/releases/download/v0.7.5/ai-chat-md-export-darwin-arm64.tar.gz"
+      sha256 "6e2be635e4ebd5d070b53e1a7d60c9862e33d9dddba48031127e190ff794f0ec"
     end
   end
 
   on_linux do
     on_intel do
-      url "https://github.com/sugurutakahashi-1234/ai-chat-md-export/releases/download/v0.7.4/ai-chat-md-export-linux-amd64.tar.gz"
-      sha256 "bc1214f1b45f5e348cdea92172b140b2cf6c2eaa8fd309f96b65ad816f0b8808"
+      url "https://github.com/sugurutakahashi-1234/ai-chat-md-export/releases/download/v0.7.5/ai-chat-md-export-linux-amd64.tar.gz"
+      sha256 "a844322e7af9a5b461dc4eca588f59263f12e9ccf94b6f3dfb3e83e6046446f7"
     end
     on_arm do
-      url "https://github.com/sugurutakahashi-1234/ai-chat-md-export/releases/download/v0.7.4/ai-chat-md-export-linux-arm64.tar.gz"
-      sha256 "6a386d39fea764bb0eef0e0f31b808373a5896826a9ed810c4685344a1c1b3eb"
+      url "https://github.com/sugurutakahashi-1234/ai-chat-md-export/releases/download/v0.7.5/ai-chat-md-export-linux-arm64.tar.gz"
+      sha256 "2127198add1d78da892c1b163b2fcd85e3ac77827e58eb31c7474fd586ee1342"
     end
   end
 
   conflicts_with formula: [
       "ai-chat-md-export",
     ]
+
+  postflight do
+    if system_command("/usr/bin/xattr", args: ["-h"]).exit_status == 0
+      system_command "/usr/bin/xattr", args: ["-dr", "com.apple.quarantine", "#{staged_path}/ai-chat-md-export"
+    end
+  end
 
   # No zap stanza required
 end
