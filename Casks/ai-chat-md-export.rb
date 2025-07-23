@@ -2,7 +2,7 @@
 cask "ai-chat-md-export" do
   desc "CLI tool to convert ChatGPT and Claude chat history to Markdown"
   homepage "https://github.com/sugurutakahashi-1234/ai-chat-md-export"
-  version "0.8.5"
+  version "1.0.0"
 
   livecheck do
     skip "Auto-generated on release."
@@ -12,23 +12,23 @@ cask "ai-chat-md-export" do
 
   on_macos do
     on_intel do
-      url "https://github.com/sugurutakahashi-1234/ai-chat-md-export/releases/download/v0.8.5/ai-chat-md-export-darwin-amd64.tar.gz"
-      sha256 "e13ff88d05f12d387afe76349029ef5c295088732bdb791624e0c8999bd1ffd0"
+      url "https://github.com/sugurutakahashi-1234/ai-chat-md-export/releases/download/v1.0.0/ai-chat-md-export-darwin-amd64.tar.gz"
+      sha256 "95f1201b9f9e92295f349b0f8f188a3148735d64cfea0d9a442fb168412729b9"
     end
     on_arm do
-      url "https://github.com/sugurutakahashi-1234/ai-chat-md-export/releases/download/v0.8.5/ai-chat-md-export-darwin-arm64.tar.gz"
-      sha256 "ebd4525dabeeaf29de153d19b75121247ae923452f09f241e8678b1ba6fbd80c"
+      url "https://github.com/sugurutakahashi-1234/ai-chat-md-export/releases/download/v1.0.0/ai-chat-md-export-darwin-arm64.tar.gz"
+      sha256 "6b5322a8507e086140f603a43504a5c8b4df89e0d18fb7303db184f3bf5625d1"
     end
   end
 
   on_linux do
     on_intel do
-      url "https://github.com/sugurutakahashi-1234/ai-chat-md-export/releases/download/v0.8.5/ai-chat-md-export-linux-amd64.tar.gz"
-      sha256 "de5e2503b66562647012eed481d46acd3c547e752dd75e1b4fdf1783ff4287fb"
+      url "https://github.com/sugurutakahashi-1234/ai-chat-md-export/releases/download/v1.0.0/ai-chat-md-export-linux-amd64.tar.gz"
+      sha256 "48257a014868bf38fc1f016cfb134256db8f6729e2678497b7e9fd3ee5e9b441"
     end
     on_arm do
-      url "https://github.com/sugurutakahashi-1234/ai-chat-md-export/releases/download/v0.8.5/ai-chat-md-export-linux-arm64.tar.gz"
-      sha256 "9facbef35c9882d441a8d2e39c5e05d077f56f8452fe27167f6f76299cdfba7b"
+      url "https://github.com/sugurutakahashi-1234/ai-chat-md-export/releases/download/v1.0.0/ai-chat-md-export-linux-arm64.tar.gz"
+      sha256 "205dcebe36e8d3f4afacfaa639dfe940aac34573426de7884085b9ab78380848"
     end
   end
 
