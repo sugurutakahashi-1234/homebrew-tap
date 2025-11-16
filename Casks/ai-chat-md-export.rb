@@ -3,7 +3,7 @@ cask "ai-chat-md-export" do
   name "ai-chat-md-export"
   desc "CLI tool to convert ChatGPT and Claude chat history to Markdown"
   homepage "https://github.com/sugurutakahashi-1234/ai-chat-md-export"
-  version "1.0.5"
+  version "1.0.6"
 
   livecheck do
     skip "Auto-generated on release."
@@ -14,22 +14,22 @@ cask "ai-chat-md-export" do
   on_macos do
     on_intel do
       url "https://github.com/sugurutakahashi-1234/ai-chat-md-export/releases/download/v#{version}/ai-chat-md-export-darwin-amd64.tar.gz"
-      sha256 "462476ef5a6982a03cf6b2878d3c69426484c9a4aeaac55c83be276ec7311dd5"
+      sha256 "dcea918b2d30133f6753c5bbc6dc422b700eca3c65022a450f3b84088363a342"
     end
     on_arm do
       url "https://github.com/sugurutakahashi-1234/ai-chat-md-export/releases/download/v#{version}/ai-chat-md-export-darwin-arm64.tar.gz"
-      sha256 "33fc8d0e8d36af4135b4d0dfb9aefb10ee33939815711e37549e0602227bb81a"
+      sha256 "63d7693360ac2d895101b0e5710fee89bbdfdf5c4498fd74e3b3652b30021c7b"
     end
   end
 
   on_linux do
     on_intel do
       url "https://github.com/sugurutakahashi-1234/ai-chat-md-export/releases/download/v#{version}/ai-chat-md-export-linux-amd64.tar.gz"
-      sha256 "4e2feca7f67b3a9663990cac1f7d6619f27ba3404b91488aa1ea46b32ab9e228"
+      sha256 "fd1311b53e0db0ac365dcffc4d6d42636983473dc885b0c15b0246e584ba412e"
     end
     on_arm do
       url "https://github.com/sugurutakahashi-1234/ai-chat-md-export/releases/download/v#{version}/ai-chat-md-export-linux-arm64.tar.gz"
-      sha256 "55e93ba0f5a82b6e58454aa7bca541640d0521334a0ea8f8ed4162110c47f84c"
+      sha256 "d86ddaa0d5ad906df0a8e3743a7aa230a4e782bab4ed112b1675f2d0f323e2f2"
     end
   end
 
